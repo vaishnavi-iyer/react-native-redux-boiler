@@ -16,20 +16,25 @@ class App extends Component {
     return (
       <View style={styles.container}>
       <Topbar />
-      {(this.props.appState == 'SUCCESS') ? 
+      {(this.props.appState === 'SUCCESS') ? 
         <Grid />
        :
       <View>
         <PressMeButton />
-        <Image
-          style={styles.image}
-          resizeMode={'cover'}
-          source={{ uri: 'https://unsplash.it/600/400/?random' }}
-        /> 
-        <Text
-          style={styles.text}>
-          Welcome to this React Native Redux boiler.
-        </Text>
+        {
+          (this.props.appState === 'ERROR') ? null :
+          <View>
+            <Image
+              style={styles.image}
+              resizeMode={'cover'}
+              source={{ uri: 'https://unsplash.it/600/400/?random' }}
+            /> 
+            <Text
+              style={styles.text}>
+              Welcome to this React Native Redux boiler.
+            </Text>
+          </View>
+        }
       </View>
       }
       </View>

@@ -5,7 +5,7 @@ const screenWidth = Dimensions.get('window').width
 export default {
   container: {
     width: screenWidth,
-    height: 60,
+    height: 75,
     backgroundColor: 'rgba(85, 207, 179, 0.6)',
     justifyContent: 'center',
     alignItems: 'center',

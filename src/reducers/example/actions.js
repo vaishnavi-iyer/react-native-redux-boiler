@@ -1,6 +1,7 @@
 export const FETCH_LIST_START= 'FETCH_LIST_START'
 export const FETCH_LIST_SUCCESS= 'FETCH_LIST_SUCCESS'
 export const FETCH_LIST_ERROR = 'FETCH_LIST_ERROR'
+export const RELOAD_APP = 'RELOAD_APP'
 
 export const pressMe = (url) => {
 	return(dispatch, getState) =>{
@@ -23,3 +24,6 @@ export const pressMe = (url) => {
 	}	
 }
 
+export const createAction = (type) => ({
+	type: type
+})

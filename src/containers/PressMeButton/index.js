@@ -12,6 +12,9 @@ function mapDispatchToProps (dispatch) {
   return {
     pressMeButtonClick: (url) => {
       dispatch(actions.pressMe(url))
+    },
+    reload: () => {
+    	dispatch(actions.createAction(actions.RELOAD_APP))
     }
   }
 }

@@ -28,6 +28,11 @@ const reducer = (state = defaultState, action) => {
       newState.drinksList = action.payload;
       return newState
 
+    case actions.RELOAD_APP:
+      newState.appState = 'IDLE';
+      newState.drinksList = [];
+      return newState
+
     default:
       return state
 
