@@ -1,5 +1,27 @@
-export const UPDATE_DEMO = 'example/UPDATE_DEMO'
-export const updateDemo = value => ({
-  type: UPDATE_DEMO,
-  value
-})
+export const FETCH_LIST_START= 'FETCH_LIST_START'
+export const FETCH_LIST_SUCCESS= 'FETCH_LIST_SUCCESS'
+export const FETCH_LIST_ERROR = 'FETCH_LIST_ERROR'
+
+export const pressMe = (url) => {
+	return(dispatch, getState) =>{
+		dispatch({ type : FETCH_LIST_START })
+		fetch(decodeURI(url))
+		    .then((response) => response.json())
+		    .then((list) => {
+		    	console.log(list)
+		    	dispatch({
+					type: FETCH_LIST_SUCCESS,
+					payload: list.drinks
+				})
+			})
+			.catch(function(err) {
+				dispatch({
+					type: FETCH_LIST_ERROR,
+					payload: 'Unable to fetch the list'
+				})
+			    console.log('Error ', err);
+			});
+
+	}	
+}
+
