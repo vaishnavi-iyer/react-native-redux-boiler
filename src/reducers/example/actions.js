@@ -8,7 +8,6 @@ export const pressMe = (url) => {
 		fetch(decodeURI(url))
 		    .then((response) => response.json())
 		    .then((list) => {
-		    	console.log(list)
 		    	dispatch({
 					type: FETCH_LIST_SUCCESS,
 					payload: list.drinks
@@ -19,7 +18,6 @@ export const pressMe = (url) => {
 					type: FETCH_LIST_ERROR,
 					payload: 'Unable to fetch the list'
 				})
-			    console.log('Error ', err);
 			});
 
 	}	

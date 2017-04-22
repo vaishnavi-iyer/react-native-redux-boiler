@@ -3,9 +3,9 @@
 //   demo: 'value'
 // })
 
-export default const DEFAULT_STATE = {
+const DEFAULT_STATE = {
   appState : 'IDLE',
   drinksList: [
-  ],
-  drinkNumber: 0
+  ]
 }
+export default DEFAULT_STATE

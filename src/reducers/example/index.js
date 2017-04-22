@@ -5,8 +5,7 @@ import * as actions from './actions'
 function cloneState (state) {
   return {
   	appState : state.appState,
-    drinksList : [...state.drinksList],
-    drinkNumber: state.drinkNumber
+    drinksList : [...state.drinksList]
   }
 }
 

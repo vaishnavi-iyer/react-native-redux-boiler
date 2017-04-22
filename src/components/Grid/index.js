@@ -19,7 +19,7 @@ export default class DrinksGrid extends Component {
     </View>
 
   render() {
-    console.log(this.props.drinksList.map((item, i)=> decodeURI(item.strDrinkThumb)));
+    // console.log(this.props.drinksList.map((item, i)=> decodeURI(item.strDrinkThumb)));
     return (
       <View style={styles.list}>
       <Grid
